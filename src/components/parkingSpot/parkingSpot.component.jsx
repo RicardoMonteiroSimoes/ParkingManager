@@ -9,7 +9,7 @@ const ParkingSpot = ({ name, occupied, ...props }) => {
             backgroundColor: occupied? '#D32F2F': '#2E7D32',
             borderRadius: 10,
             margin: 10,
-            width: '80%',
+            minWidth: '350px',
             '-webkit-transition': 'background-color 1s ease',
             '-moz-transition':    'background-color 1s ease',
             '-ms-transition':     'background-color 1s ease',
