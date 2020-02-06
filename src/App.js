@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ParkingSpot from './components/parkingSpot/parkingSpot.component';
+import Text from './components/text/text.component';
 import './App.css';
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
           parkingData.map(spot => (
             <ParkingSpot key={spot.cell[0]}name={spot.cell[1]} occupied={spot.cell[2] === '1'}/>
           ))
-          : null}
+          : <Text text={'Konnte keine Daten abrufen!'}></Text>}
         </header>
       </div>
     );
