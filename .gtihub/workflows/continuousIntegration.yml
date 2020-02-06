@@ -1,0 +1,19 @@
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  NotifyServer:
+    runs-on: ubuntu-latest
+    name: Telling Server to fetch and rebuild...
+    steps:
+    - name: CustomHookAction to start CI procedure...
+      id: hook
+      uses: ByRicardoSimoes/CustomHookAction@1.0.0
+      with:
+        repoUrl: 'https://github.com/ByRicardoSimoes/ParkingManager'
+        repoName: 'ParkingManager'
+        targetIp: ${{ secrets.TARGET_IP }}
+        targetPort: ${{ secrets.TARGET_PORT }}
+    - name: Status of the Hook
+      run: echo  "Status of the first Hook was ${{ steps.hook.outputs.status }}"
