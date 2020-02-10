@@ -8,6 +8,14 @@ function App() {
 
   const [parkingData, setParkingData] = useState(null);
 
+  const parkingSpotHolder = {
+    display: 'flex',
+    margin: 'auto',
+    'flex-wrap': 'wrap',
+    'align-self': 'auto',
+    'justify-content': 'center'
+  }
+
   useEffect(() => {
     pullParkingData();
     }, [])
@@ -25,15 +33,17 @@ function App() {
     .then(res => res.json())
     .then(data => setParkingData(data.rows));
   }
+  
+  const spots = parkingData ? parkingData.map(spot => (
+    <ParkingSpot key={spot.cell[0]} name={spot.cell[1]} occupied={spot.cell[2] === '1'}/>))
+    : <Text text={'Konnte keine Daten abrufen!'}></Text>;
 
     return (
       <div className="App">
         <header className="App-header">
-          {parkingData ? 
-          parkingData.map(spot => (
-            <ParkingSpot key={spot.cell[0]}name={spot.cell[1]} occupied={spot.cell[2] === '1'}/>
-          ))
-          : <Text text={'Konnte keine Daten abrufen!'}></Text>}
+          <div style={parkingSpotHolder}>
+            {spots}
+          </div>
         </header>
       </div>
     );
