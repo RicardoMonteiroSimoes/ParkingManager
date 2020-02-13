@@ -9,10 +9,10 @@ const ParkingSpot = ({ name, occupied, ...props }) => {
         margin: 10,
         width: 300,
         fontSize: 20,
-        '-webkit-transition': 'background-color 1s ease',
-        '-moz-transition': 'background-color 1s ease',
-        '-ms-transition': 'background-color 1s ease',
-        '-o-transition': 'background-color 1s ease',
+        WebkitTransition: 'background-color 1s ease',
+        MozTransition: 'background-color 1s ease',
+        msTransition: 'background-color 1s ease',
+        OTransition: 'background-color 1s ease',
         transition: 'background-color 1s ease',
     };
 

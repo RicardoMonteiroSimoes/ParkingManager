@@ -11,9 +11,9 @@ function App() {
   const parkingSpotHolder = {
     display: 'flex',
     margin: 'auto',
-    'flex-wrap': 'wrap',
-    'align-self': 'auto',
-    'justify-content': 'center'
+    flexWrap: 'wrap',
+    alignSelf: 'auto',
+    justifyContent: 'center'
   }
 
   useEffect(() => {
