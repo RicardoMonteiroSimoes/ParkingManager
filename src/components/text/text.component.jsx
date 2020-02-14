@@ -9,7 +9,7 @@ const Text = ({ text, ...props }) => {
             backgroundColor: '#FF5722',
             borderRadius: 10,
             margin: 10,
-            minWidth: '350px'
+            width: 300,
         }
     }));
 
