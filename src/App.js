@@ -29,7 +29,7 @@ function App() {
   })
 
   const pullParkingData = () => {
-    fetch('http://extranet.spline.ch/ParkingManager/ParkingService?oper=load')
+    fetch('')
     .then(res => res.json())
     .then(data => setParkingData(data.rows));
   }
