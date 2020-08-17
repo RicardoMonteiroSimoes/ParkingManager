@@ -22,4 +22,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_KEY }}
           ACCESS_TOKEN: ${{ secrets.DEPLOY_KEY }}
           BRANCH: gh_page # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          FOLDER: build/page # The folder the action should deploy.
