@@ -2,6 +2,7 @@
   "name": "parking_manager",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ricardomonteirosimoes.github.io/ParkingManager/",
   "dependencies": {
     "@material-ui/core": "^4.9.0",
     "@testing-library/jest-dom": "^4.2.4",
